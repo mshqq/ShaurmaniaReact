@@ -1,0 +1,3 @@
+.footer__bottom-address:last-child {
+  grid-column: 1 / -1;
+}
