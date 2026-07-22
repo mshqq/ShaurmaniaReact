@@ -1,32 +1,45 @@
-# React + TypeScript + Vite
+# Шаурмания - React версия
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Миграция фронтенда [Flask-версии Шаурмании](https://github.com/mshqq/ShaurmaniaApp) на React + TypeScript. Бэкенд остаётся без изменений - переписывается только клиентская часть.
 
-Currently, two official plugins are available:
+## Что меняется
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+| Flask + AJAX                  | Эта версия                                           |
+| ----------------------------- | ---------------------------------------------------- |
+| Jinja2-шаблоны + AJAX-запросы | Планируется как SPA                                  |
+| Vanilla JS-модули             | Компонентная архитектура, TypeScript                 |
+| Чистый CSS                    | Tailwind CSS                                         |
+| Сборка через Flask static     | Vite                                                 |
+| Тот же Flask-бэкенд и API     | Без изменений - React обращается к тем же эндпоинтам |
 
-## React Compiler
+## Стек
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React / TypeScript** - компоненты, типизация
+- **Vite** - сборка
+- **Tailwind CSS** - стили
+- **Oxlint** - линтинг
 
-## Expanding the Oxlint configuration
+## Быстрый старт
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+1. Установите зависимости:
+```bash
+npm install
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+2. Запустите dev-сервер
+```bash
+npm run dev
+```
+
+3. Для сборки
+```bash
+npm run build
+```
+
+> Бэкенд запускается отдельно из репозитория [ShaurmaniaApp](https://github.com/mshqq/ShaurmaniaApp)
+
+---
+
+## Статус
+
+Проект в разработке. На данный момент реализованы базовая структура и layout-компоненты (Header, Footer, Button). Каталог товаров, корзина и оформление заказа — в процессе переноса с Flask + AJAX версии.
