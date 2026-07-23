@@ -1,4 +1,6 @@
-export default function SliderFrame({ text, img, index }) {
+import type { Slide } from './Slide';
+
+export default function SliderFrame({ text, img, index }: Slide) {
   const bubblesList = [];
   for (let i = 0; i < 4; i++) {
     bubblesList.push(
