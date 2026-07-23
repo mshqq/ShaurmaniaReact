@@ -23,16 +23,15 @@ export default function SliderSection() {
     setIndex(prev => (prev >= Slides.length - 1 ? 0 : prev + 1));
   };
   return (
-    <div className="flex items-center flex-row mx-auto bg-[#1D1D1D] justify-center gap-10 pt-10 pb-20">
+    <div className="flex items-center flex-row mx-auto bg-[#1D1D1D] justify-center md:gap-5 pt-10 pb-2 md:pb-10 overflow-hidden">
       <button
         onClick={decrement}
-        className="block p-0 border-0 bg-transparent leading-none opacity-100 hover:opacity-70 cursor-pointer"
+        className="shrink-0 block p-0 border-0 bg-transparent leading-none opacity-100 hover:opacity-70 cursor-pointer"
       >
         <img
-          className="block"
+          className="block w-8 md:w-12"
           src={PrevIcon}
-          alt=""
-          width="50"
+          alt="Предыдущий слайд"
         />
       </button>
       <SliderFrame
@@ -42,13 +41,12 @@ export default function SliderSection() {
       />
       <button
         onClick={increment}
-        className="block p-0 border-0 bg-transparent leading-none opacity-100 hover:opacity-70 cursor-pointer"
+        className="shrink-0 block p-0 border-0 bg-transparent leading-none opacity-100 hover:opacity-70 cursor-pointer"
       >
         <img
-          className="block"
+          className="block w-8 md:w-12"
           src={NextIcon}
-          alt=""
-          width="50"
+          alt="Следующий слайд"
         />
       </button>
     </div>
