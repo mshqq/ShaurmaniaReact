@@ -3,7 +3,7 @@ import Footer from '../components/layout/Footer';
 import SliderSection from '../components/sections/SliderSection/SliderSection';
 import FeaturesSection from '../components/sections/FeatureSection/FeaturesSection';
 import MenuSection from '../components/sections/MenuSection/MenuSection';
-import AboutSection from '../components/sections/AboutSection';
+import AboutSection from '../components/sections/AboutSection/AboutSection';
 import FormSection from '../components/sections/FormSection';
 
 export default function HomePage() {
