@@ -1,7 +1,10 @@
-export interface menuItem {
+export interface TMenuItem {
   id: number;
-  image: string;
-  title: string;
+  image_path: string;
+  name: string;
   description: string;
+  composition: string;
   price: number;
+  slug: string;
+  category: string;
 }
